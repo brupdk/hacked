@@ -1,0 +1,137 @@
+<html><head>
+<meta content="text/html; charset=utf-8">
+<title>Bug Bounty </title>
+<meta name="author" content="Faisal Ahmed">
+<meta name="referrer" content="never">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="SHORTCUT ICON" href="https://assets.faisalahmed.me/61.gif">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+<style>
+body {
+  background-image: url(https://assets.faisalahmed.me/bg1.png);
+	color:#FFF;
+	font-size: 14pt;
+    font-family:"Merienda One";
+	font-weight: bold;
+	padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.row {
+  padding: 30px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+canvas {
+  height: 100vh;
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+}
+
+a {
+color:#fff;
+text-decoration:none;
+}
+a:hover {
+color:#DA4932;
+}
+hr {border: 2;width: 50%;}
+
+input{
+	overflow: hidden;
+	color:#FFF;
+        background: transparent;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border: 1px solid;
+	font-family:Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:32px;
+	padding:4px 16px;
+}
+</style>
+</head><body>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+    function check_submit(e) {
+        if (e && e.keyCode == 13 && e.target.type != 'textarea') {
+            e.preventDefault();
+            e.defaultPrevented = true;
+
+            if($('#tool-form').valid() == true) {
+                if ($('#security-check').is(':visible') == true) {
+                    document.getElementById('tool-form').submit();
+            }
+        }
+    }
+	}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100953906-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="particles-js">
+<div style="font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #FF0000, 0 0 5px #FF0000, 0 0 5px #FF0000;color: #FFF">HACKED BY BOT AMIT<br></div><br>
+<div onkeypress="check_submit(event)">
+        
+<form novalidate="novalidate" onsubmit="return false" id="tool-form" role="form" method="GET" action="/" target="response-frame">
+<input name="p" value="tool" type="hidden">
+<input name="t" value="10" type="hidden">
+<input name="act" value="exec" type="hidden">
+<script>
+document.getElementById('tool-form').setAttribute('onsubmit', 'return false');
+check_submit = function(event) {};
+</script>
+<script>
+function google_it(type) 
+{
+    if($('#tool-form').valid() == false) {
+        return;
+    }
+    
+    site = document.getElementById('target').value;
+    if (site.indexOf('://') > 0) {
+        site = site.substr(site.indexOf('://')+3);
+    }                            
+    url = 'https://www.google.com/search?q=';
+    url += 'site:.*.' + site;
+
+switch(type)
+{
+
+}
+    window.open(url);
+
+}
+</script>
+
+<div style="text-align: center;"><b>POC :</b>
